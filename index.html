@@ -5,144 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🌺 Créateur de Parfum Jamaïcain</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f3f3f3;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        
-        header {
-            background-color: #009E60;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        h1#app-title {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        main {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        section {
-            margin: 20px 0;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        h2 {
-            color: #009E60;
-            border-bottom: 2px solid #FFD700;
-            padding-bottom: 10px;
-        }
-        
-        label {
-            display: block;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-        
-        select,
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-        
-        button {
-            background-color: #009E60;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin-top: 15px;
-            font-size: 1rem;
-        }
-        
-        button:hover {
-            background-color: #FFD700;
-            color: #333;
-        }
-        
-        #perfume-result,
-        #quiz-result {
-            margin-top: 20px;
-            font-style: italic;
-            background-color: #f0f0f0;
-            padding: 15px;
-            border-radius: 5px;
-            font-size: 1.1rem;
-        }
-        
-        #quiz-section,
-        #perfume-history,
-        #diy-recipes {
-            background-color: #006837;
-            color: white;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-        
-        #ingredients-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 15px;
-        }
-        
-        .ingredient {
-            background-color: #FFD700;
-            color: #333;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-        }
-        
-        .emoji {
-            font-size: 1.5em;
-            margin-right: 5px;
-        }
-        
-        #perfume-image {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            margin: 20px auto;
-            display: block;
-        }
-        
-        #quiz-progress {
-            margin-top: 15px;
-            font-weight: bold;
-        }
-        
-        @media (max-width: 600px) {
-            main {
-                padding: 10px;
-            }
-            section {
-                padding: 15px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -156,32 +19,44 @@
             <h2>🧪 Créez Votre Parfum</h2>
             <label for="top-note">Note de Tête :</label>
             <select id="top-note">
-                <option value="coconut">🥥 Noix de coco</option>
+                <option value="mango">🥭 Mangue</option>
+                <option value="passionfruit">🍈 Fruit de la passion</option>
+                <option value="guava">🍍 Goyave</option>
+                <option value="papaya">🍑 Papaye</option>
+                <option value="soursop">🍏 Corossol</option>
                 <option value="lime">🍋 Citron vert</option>
-                <option value="pineapple">🍍 Ananas</option>
+                <option value="pineapple">🍎 Ananas</option>
                 <option value="ginger">🌿 Gingembre</option>
                 <option value="bergamot">🍊 Bergamote</option>
-                <option value="grapefruit">🍊 Pamplemousse jamaïcain</option>
+                <option value="grapefruit">🍇 Pamplemousse jamaïcain</option>
             </select>
 
             <label for="heart-note">Note de Cœur :</label>
             <select id="heart-note">
-                <option value="hibiscus">🌺 Hibiscus</option>
-                <option value="jasmine">🌼 Jasmin</option>
-                <option value="frangipani">🌸 Frangipanier</option>
-                <option value="orchid">🌷 Orchidée</option>
-                <option value="rose">🌹 Rose</option>
-                <option value="allspice">🌶️ Piment de la Jamaïque</option>
+                <option value="ylang">🌼 Ylang-ylang</option>
+                <option value="plumeria">🌺 Plumeria</option>
+                <option value="cinnamon">🌿 Cannelle</option>
+                <option value="bayleaf">🍃 Feuille de laurier</option>
+                <option value="gingerlily">🌸 Gingembre Lily</option>
+                <option value="jasmine">💐 Jasmin</option>
+                <option value="hibiscus">🌷 Hibiscus</option>
+                <option value="frangipani">🌹 Frangipanier</option>
+                <option value="orchid">🌻 Orchidée</option>
+                <option value="rose">🌼 Rose</option>
             </select>
 
             <label for="base-note">Note de Fond :</label>
             <select id="base-note">
-                <option value="vetiver">🌾 Vétiver jamaïcain</option>
-                <option value="vanilla">🍶 Vanille</option>
-                <option value="sandalwood">🌳 Bois de santal</option>
-                <option value="ambrette">🌱 Ambrette (musc naturel)</option>
+                <option value="rum">🥃 Rhum jamaïcain</option>
+                <option value="patchouli">🍂 Patchouli</option>
+                <option value="cedarwood">🌲 Cèdre</option>
+                <option value="oakmoss">🌿 Mousse de chêne</option>
+                <option value="myrrh">🪔 Myrrhe</option>
+                <option value="sandalwood">🪵 Bois de santal</option>
                 <option value="amber">💎 Ambre</option>
                 <option value="tonka">🌰 Fève Tonka</option>
+                <option value="vetiver">🌾 Vétiver jamaïcain</option>
+                <option value="vanilla">🍦 Vanille</option>
             </select>
 
             <label for="perfume-name">Nom de votre parfum :</label>
@@ -189,7 +64,7 @@
 
             <button id="create-perfume-btn">Créer le Parfum</button>
             <div id="perfume-result"></div>
-            <canvas id="perfume-image" width="300" height="300"></canvas>
+            <canvas id="perfume-image" width="200" height="300"></canvas>
         </section>
 
         <section id="quiz-section">
@@ -228,136 +103,7 @@
         </section>
     </main>
 
-    <script>
-        // Perfume creation functionality
-        document.getElementById('create-perfume-btn').addEventListener('click', () => {
-            const topNote = document.getElementById('top-note');
-            const heartNote = document.getElementById('heart-note');
-            const baseNote = document.getElementById('base-note');
-            const perfumeName = document.getElementById('perfume-name').value || "Mon Parfum Jamaïcain";
-
-            const result = `🎉 Félicitations ! Votre parfum "${perfumeName}" a été créé : 
-                            \n🔝 Note de tête : ${topNote.options[topNote.selectedIndex].text}
-                            \n💖 Note de cœur : ${heartNote.options[heartNote.selectedIndex].text}
-                            \n🔻 Note de fond : ${baseNote.options[baseNote.selectedIndex].text}
-                            \n\n💧 Composition : Alcool biologique à 90%, huiles essentielles naturelles`;
-
-            document.getElementById('perfume-result').textContent = result;
-
-            // Generate perfume bottle image
-            const canvas = document.getElementById('perfume-image');
-            const ctx = canvas.getContext('2d');
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Draw bottle
-            ctx.fillStyle = '#FFD700';
-            ctx.beginPath();
-            ctx.moveTo(100, 50);
-            ctx.lineTo(200, 50);
-            ctx.lineTo(180, 250);
-            ctx.lineTo(120, 250);
-            ctx.closePath();
-            ctx.fill();
-
-            // Draw cap
-            ctx.fillStyle = '#009E60';
-            ctx.fillRect(120, 20, 60, 30);
-
-            // Add label
-            ctx.fillStyle = '#FFFFFF';
-            ctx.font = '16px Arial';
-            ctx.textAlign = 'center';
-            ctx.fillText(perfumeName, 150, 150);
-
-            // Add notes
-            ctx.font = '12px Arial';
-            ctx.fillText(topNote.value, 150, 180);
-            ctx.fillText(heartNote.value, 150, 200);
-            ctx.fillText(baseNote.value, 150, 220);
-        });
-
-        // Quiz game functionality
-        const quizQuestions = [{
-            question: "🥥 Quel ingrédient est une note de tête courante dans les parfums jamaïcains ?",
-            answer: "noix de coco"
-        }, {
-            question: "🌺 Quelle est une note de cœur clé utilisée dans les parfums tropicaux ?",
-            answer: "hibiscus"
-        }, {
-            question: "🌾 Quelle note de fond ajoute de la profondeur au parfum ?",
-            answer: "vétiver"
-        }, {
-            question: "🌿 Quelle épice jamaïcaine est parfois utilisée comme note de tête ?",
-            answer: "gingembre"
-        }, {
-            question: "🍍 Quel fruit tropical est souvent utilisé dans les parfums jamaïcains ?",
-            answer: "ananas"
-        }, {
-            question: "🌸 Quelle fleur exotique est populaire comme note de cœur ?",
-            answer: "frangipanier"
-        }, {
-            question: "🍊 Quel agrume apporte une fraîcheur en note de tête ?",
-            answer: "bergamote"
-        }, {
-            question: "🌳 Quel bois précieux est utilisé comme note de fond ?",
-            answer: "bois de santal"
-        }, {
-            question: "🍶 Quelle épice douce est appréciée en note de fond ?",
-            answer: "vanille"
-        }, {
-            question: "💎 Quelle résine fossile est utilisée pour sa chaleur en parfumerie ?",
-            answer: "ambre"
-        }];
-
-        let currentQuestionIndex = 0;
-        let score = 0;
-
-        function loadNewQuestion() {
-            if (currentQuestionIndex < quizQuestions.length) {
-                const question = quizQuestions[currentQuestionIndex];
-                document.getElementById('quiz-question').textContent = question.question;
-                document.getElementById('quiz-progress').textContent = `Question ${currentQuestionIndex + 1}/${quizQuestions.length}`;
-            } else {
-                endQuiz();
-            }
-        }
-
-        function endQuiz() {
-            document.getElementById('quiz-question').textContent = "Quiz terminé !";
-            document.getElementById('quiz-result').textContent = `Votre score final est de ${score}/${quizQuestions.length}.`;
-            document.getElementById('quiz-answer').style.display = 'none';
-            document.getElementById('submit-answer-btn').style.display = 'none';
-        }
-
-        document.getElementById('submit-answer-btn').addEventListener('click', () => {
-            const userAnswer = document.getElementById('quiz-answer').value.trim().toLowerCase();
-            const correctAnswer = quizQuestions[currentQuestionIndex].answer.toLowerCase();
-
-            if (userAnswer === correctAnswer) {
-                score++;
-                document.getElementById('quiz-result').textContent = "✅ Correct ! Bien joué !";
-            } else {
-                document.getElementById('quiz-result').textContent = `❌ Oups ! La bonne réponse était "${quizQuestions[currentQuestionIndex].answer}".`;
-            }
-
-            currentQuestionIndex++;
-            document.getElementById('quiz-answer').value = '';
-            loadNewQuestion();
-        });
-
-        loadNewQuestion();
-
-        // Popular ingredients
-        const popularIngredients = ['🥥 Noix de coco', '🍋 Citron vert', '🍍 Ananas', '🌿 Gingembre', '🌺 Hibiscus', '🌼 Jasmin', '🌸 Frangipanier', '🌷 Orchidée', '🌾 Vétiver', '🍶 Vanille', '🌳 Bois de santal', '🌱 Ambrette', '🍊 Pamplemousse', '🌶️ Piment de la Jamaïque', '🌰 Fève Tonka'];
-
-        const ingredientsList = document.getElementById('ingredients-list');
-        popularIngredients.forEach(ingredient => {
-            const span = document.createElement('span');
-            span.textContent = ingredient;
-            span.className = 'ingredient';
-            ingredientsList.appendChild(span);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
